@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bruno · QA Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Scan Line Overlay -->
+  <div class="scanlines" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">
+      <span class="nav-logo-bracket">[</span>
+      <span class="nav-logo-text">QA::Portfolio</span>
+      <span class="nav-logo-bracket">]</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#sobre" class="nav-link" data-text="sobre">sobre</a></li>
+      <li><a href="#skills" class="nav-link" data-text="skills">skills</a></li>
+      <li><a href="#projetos" class="nav-link" data-text="projetos">projetos</a></li>
+      <li><a href="#metricas" class="nav-link" data-text="métricas">métricas</a></li>
+      <li><a href="#contato" class="nav-link" data-text="contato">contato</a></li>
+    </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-grid-bg" aria-hidden="true"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>disponível para novas oportunidades</span>
+      </div>
+      <div class="hero-title-wrapper">
+        <p class="hero-label">// QA Software Analyst</p>
+        <h1 class="hero-title">
+          <span class="hero-title-line" id="name-line">Bruno</span>
+          <span class="hero-title-accent">Ferreira</span>
+        </h1>
+      </div>
+      <p class="hero-sub">
+        Qualidade não é um estágio do processo —<br />
+        <em>é a mentalidade que atravessa cada linha do ciclo.</em>
+      </p>
+      <div class="hero-cta">
+        <a href="#projetos" class="btn btn-primary">
+          <span>ver projetos</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#contato" class="btn btn-ghost">contato</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num" data-target="4">0</span>
+          <span class="stat-label">anos de experiência</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="3">0</span>
+          <span class="stat-label">frameworks de automação</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" data-target="100">0</span>
+          <span class="stat-label">% ciclo de vida coberto</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-terminal">
+      <div class="terminal-header">
+        <div class="terminal-dots">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+        </div>
+        <span class="terminal-title">test_runner.ts</span>
+      </div>
+      <div class="terminal-body" id="terminal-body">
+        <div class="terminal-line"><span class="t-dim">$</span> <span class="t-cmd">npx playwright test</span></div>
+        <div class="terminal-line t-delay-1"><span class="t-dim">▶</span> Running <span class="t-green">42 tests</span> across 3 projects</div>
+        <div class="terminal-line t-delay-2"><span class="t-dim">✓</span> <span class="t-green">login.spec.ts</span> <span class="t-dim">(1.2s)</span></div>
+        <div class="terminal-line t-delay-3"><span class="t-dim">✓</span> <span class="t-green">checkout.spec.ts</span> <span class="t-dim">(2.4s)</span></div>
+        <div class="terminal-line t-delay-4"><span class="t-dim">✓</span> <span class="t-green">api/payments.spec.ts</span> <span class="t-dim">(0.8s)</span></div>
+        <div class="terminal-line t-delay-5"><span class="t-dim">✓</span> <span class="t-green">reports/dashboard.spec.ts</span> <span class="t-dim">(3.1s)</span></div>
+        <div class="terminal-line t-delay-6 t-result"><span class="t-green">✔ 42 passed</span> <span class="t-dim">| 0 failed | 7.5s</span></div>
+        <div class="terminal-cursor" aria-hidden="true">█</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section class="section sobre" id="sobre">
+    <div class="container">
+      <div class="section-label">
+        <span class="label-line"></span>
+        <span class="label-text">// 01 — sobre</span>
+      </div>
+      <div class="sobre-grid">
+        <div class="sobre-text">
+          <h2 class="section-title">Qualidade<br /><span class="accent">como cultura,</span><br />não como etapa.</h2>
+          <p class="sobre-desc">
+            QA Analyst com mais de 4 anos de experiência em ambientes ágeis, atuando em todo o ciclo de entrega: da análise de requisitos até o teste de aceitação do negócio (BAT).
+          </p>
+          <p class="sobre-desc">
+            Especialista em automação com <strong>Playwright</strong>, <strong>Cypress</strong> e <strong>Jest</strong>, integração de pipelines CI/CD com <strong>GitHub Actions</strong> e <strong>Jenkins</strong>, e visualização de dados de qualidade com <strong>Grafana</strong> + <strong>PostgreSQL</strong>.
+          </p>
+          <p class="sobre-desc">
+            Formado em Análise de Sistemas, pós-graduado, e com conhecimento aplicado das normas <strong>ISO 9001</strong> e <strong>ISO 27001</strong>.
+          </p>
+          <div class="sobre-tags">
+            <span class="tag">Shift Left Testing</span>
+            <span class="tag">BDD / Gherkin</span>
+            <span class="tag">Scrum</span>
+            <span class="tag">ISO 9001</span>
+            <span class="tag">ISO 27001</span>
+          </div>
+        </div>
+        <div class="sobre-visual">
+          <div class="sobre-card">
+            <div class="sobre-card-header">
+              <span class="t-dim">// processo QA</span>
+            </div>
+            <div class="process-flow">
+              <div class="process-step active">
+                <span class="ps-num">01</span>
+                <span class="ps-name">Requisitos</span>
+                <span class="ps-check">✓</span>
+              </div>
+              <div class="process-connector"></div>
+              <div class="process-step active">
+                <span class="ps-num">02</span>
+                <span class="ps-name">Planejamento</span>
+                <span class="ps-check">✓</span>
+              </div>
+              <div class="process-connector"></div>
+              <div class="process-step active">
+                <span class="ps-num">03</span>
+                <span class="ps-name">Automação</span>
+                <span class="ps-check">✓</span>
+              </div>
+              <div class="process-connector"></div>
+              <div class="process-step active">
+                <span class="ps-num">04</span>
+                <span class="ps-name">CI/CD</span>
+                <span class="ps-check">✓</span>
+              </div>
+              <div class="process-connector"></div>
+              <div class="process-step active">
+                <span class="ps-num">05</span>
+                <span class="ps-name">Relatórios</span>
+                <span class="ps-check">✓</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section-label">
+        <span class="label-line"></span>
+        <span class="label-text">// 02 — stack & skills</span>
+      </div>
+      <h2 class="section-title">Ferramentas <span class="accent">do ofício.</span></h2>
+
+      <div class="skills-grid">
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">⚡</span>
+            <h3>Automação de Testes</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <span class="skill-name">Playwright</span>
+              <div class="skill-bar-wrapper">
+                <div class="skill-bar" data-level="92"></div>
+              </div>
+              <span class="skill-pct">92%</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Cypress</span>
+              <div class="skill-bar-wrapper">
+                <div class="skill-bar" data-level="85"></div>
+              </div>
+              <span class="skill-pct">85%</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Jest</span>
+              <div class="skill-bar-wrapper">
+                <div class="skill-bar" data-level="80"></div>
+              </div>
+              <span class="skill-pct">80%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">🔗</span>
+            <h3>API Testing</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <span class="skill-name">Postman</span>
+              <div class="skill-bar-wrapper">
+                <div class="skill-bar" data-level="90"></div>
+              </div>
+              <span class="skill-pct">90%</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">ApiDog</span>
+              <div class="skill-bar-wrapper">
+                <div class="skill-bar" data-level="82"></div>
+              </div>
+              <span class="skill-pct">82%</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Swagger</span>
+              <div class="skill-bar-wrapper">
+                <div class="skill-bar" data-level="78"></div>
+              </div>
+              <span class="skill-pct">78%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">🔄</span>
+            <h3>CI/CD & DevOps</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <span class="skill-name">GitHub Actions</span>
+              <div class="skill-bar-wrapper">
+                <div class="skill-bar" data-level="88"></div>
+              </div>
+              <span class="skill-pct">88%</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Jenkins</span>
+              <div class="skill-bar-wrapper">
+                <div class="skill-bar" data-level="75"></div>
+              </div>
+              <span class="skill-pct">75%</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Docker</span>
+              <div class="skill-bar-wrapper">
+                <div class="skill-bar" data-level="70"></div>
+              </div>
+              <span class="skill-pct">70%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <span class="skill-cat-icon">📊</span>
+            <h3>Observabilidade</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-item">
+              <span class="skill-name">Grafana</span>
+              <div class="skill-bar-wrapper">
+                <div class="skill-bar" data-level="85"></div>
+              </div>
+              <span class="skill-pct">85%</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">PostgreSQL</span>
+              <div class="skill-bar-wrapper">
+                <div class="skill-bar" data-level="80"></div>
+              </div>
+              <span class="skill-pct">80%</span>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">TypeScript</span>
+              <div class="skill-bar-wrapper">
+                <div class="skill-bar" data-level="83"></div>
+              </div>
+              <span class="skill-pct">83%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tech-pills">
+        <span class="tech-pill">Azure DevOps</span>
+        <span class="tech-pill">Jira</span>
+        <span class="tech-pill">BDD / Gherkin</span>
+        <span class="tech-pill">TestLink</span>
+        <span class="tech-pill">Mochawesome</span>
+        <span class="tech-pill">Git</span>
+        <span class="tech-pill">Node.js</span>
+        <span class="tech-pill">SQL</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projetos -->
+  <section class="section projetos" id="projetos">
+    <div class="container">
+      <div class="section-label">
+        <span class="label-line"></span>
+        <span class="label-text">// 03 — projetos</span>
+      </div>
+      <h2 class="section-title">Trabalho <span class="accent">real.</span></h2>
+
+      <div class="projetos-grid">
+
+        <article class="projeto-card featured">
+          <div class="projeto-card-inner">
+            <div class="projeto-header">
+              <span class="projeto-type">Automação + Observabilidade</span>
+              <div class="projeto-links">
+                <a href="#" class="projeto-link" title="GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.085 1.84 1.238 1.84 1.238 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.604-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="projeto-title">Playwright Web · Reporting Pipeline</h3>
+            <p class="projeto-desc">
+              Infraestrutura completa de relatórios de testes com Playwright. Gera relatórios JSON com timestamp, persiste resultados no PostgreSQL e visualiza métricas em dashboards Grafana em tempo real.
+            </p>
+            <div class="projeto-stack">
+              <span>TypeScript</span>
+              <span>Playwright</span>
+              <span>PostgreSQL</span>
+              <span>Grafana</span>
+              <span>Mochawesome</span>
+            </div>
+            <div class="projeto-metrics">
+              <div class="pm-item">
+                <span class="pm-val">42</span>
+                <span class="pm-label">testes automatizados</span>
+              </div>
+              <div class="pm-item">
+                <span class="pm-val">100%</span>
+                <span class="pm-label">relatórios persistidos</span>
+              </div>
+            </div>
+          </div>
+          <div class="projeto-glow"></div>
+        </article>
+
+        <article class="projeto-card">
+          <div class="projeto-card-inner">
+            <div class="projeto-header">
+              <span class="projeto-type">BDD · Requisitos</span>
+              <div class="projeto-links">
+                <a href="#" class="projeto-link" title="GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.085 1.84 1.238 1.84 1.238 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.604-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="projeto-title">Move Mais · BDD Specs</h3>
+            <p class="projeto-desc">
+              Cenários de teste BDD em Gherkin para a tela de gerenciamento de versões do app Move Mais. Cobertura completa das user stories desde a fase de requisitos.
+            </p>
+            <div class="projeto-stack">
+              <span>Gherkin</span>
+              <span>BDD</span>
+              <span>Cucumber</span>
+              <span>Jira</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="projeto-card">
+          <div class="projeto-card-inner">
+            <div class="projeto-header">
+              <span class="projeto-type">CI/CD · Pipeline</span>
+              <div class="projeto-links">
+                <a href="#" class="projeto-link" title="GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.085 1.84 1.238 1.84 1.238 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.604-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="projeto-title">GitHub Actions · QA Workflow</h3>
+            <p class="projeto-desc">
+              Pipeline CI/CD completo para execução automática de testes Playwright a cada pull request, com geração de relatórios e notificações de falha.
+            </p>
+            <div class="projeto-stack">
+              <span>GitHub Actions</span>
+              <span>Playwright</span>
+              <span>Node.js</span>
+              <span>YAML</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="projeto-card">
+          <div class="projeto-card-inner">
+            <div class="projeto-header">
+              <span class="projeto-type">Documentação · Processo</span>
+            </div>
+            <h3 class="projeto-title">QA Process Flow · Documentação</h3>
+            <p class="projeto-desc">
+              Documentação visual completa do fluxo QA da equipe: do levantamento de requisitos ao BAT, cobrindo as áreas de Requisitos, QA, Desenvolvimento e Negócio.
+            </p>
+            <div class="projeto-stack">
+              <span>Miro</span>
+              <span>Confluence</span>
+              <span>BPMN</span>
+              <span>Scrum</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Métricas -->
+  <section class="section metricas" id="metricas">
+    <div class="container">
+      <div class="section-label">
+        <span class="label-line"></span>
+        <span class="label-text">// 04 — métricas & impacto</span>
+      </div>
+      <h2 class="section-title">Números <span class="accent">que importam.</span></h2>
+
+      <div class="metricas-grid">
+        <div class="metrica-card">
+          <div class="metrica-icon">🧪</div>
+          <div class="metrica-num counter" data-target="4">0</div>
+          <div class="metrica-unit">anos+</div>
+          <div class="metrica-label">em QA & Automação</div>
+        </div>
+        <div class="metrica-card accent-card">
+          <div class="metrica-icon">🚀</div>
+          <div class="metrica-num counter" data-target="3">0</div>
+          <div class="metrica-unit">frameworks</div>
+          <div class="metrica-label">de automação dominados</div>
+        </div>
+        <div class="metrica-card">
+          <div class="metrica-icon">🔗</div>
+          <div class="metrica-num counter" data-target="5">0</div>
+          <div class="metrica-unit">estágios</div>
+          <div class="metrica-label">do ciclo cobertos</div>
+        </div>
+        <div class="metrica-card">
+          <div class="metrica-icon">📊</div>
+          <div class="metrica-num counter" data-target="2">0</div>
+          <div class="metrica-unit">normas ISO</div>
+          <div class="metrica-label">aplicadas no processo</div>
+        </div>
+      </div>
+
+      <div class="metodologias">
+        <h3 class="met-title">Metodologias & Práticas</h3>
+        <div class="met-grid">
+          <div class="met-item">
+            <span class="met-icon">◈</span>
+            <div>
+              <strong>Shift Left Testing</strong>
+              <p>Qualidade inserida desde a fase de requisitos</p>
+            </div>
+          </div>
+          <div class="met-item">
+            <span class="met-icon">◈</span>
+            <div>
+              <strong>BDD na fase de Requisitos</strong>
+              <p>Cenários Gherkin escritos junto ao PO antes do dev</p>
+            </div>
+          </div>
+          <div class="met-item">
+            <span class="met-icon">◈</span>
+            <div>
+              <strong>Test Reporting Contínuo</strong>
+              <p>Persistência de resultados e dashboards Grafana</p>
+            </div>
+          </div>
+          <div class="met-item">
+            <span class="met-icon">◈</span>
+            <div>
+              <strong>Scrum & Cerimônias</strong>
+              <p>QA integrado em todas as cerimônias da sprint</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section class="section contato" id="contato">
+    <div class="container">
+      <div class="section-label">
+        <span class="label-line"></span>
+        <span class="label-text">// 05 — contato</span>
+      </div>
+      <div class="contato-grid">
+        <div class="contato-text">
+          <h2 class="section-title">Vamos<br /><span class="accent">conversar.</span></h2>
+          <p class="contato-desc">
+            Aberto a oportunidades, colaborações e trocas sobre qualidade de software. Me manda uma mensagem.
+          </p>
+          <div class="contato-links">
+            <a href="mailto:bruno@email.com" class="contato-link">
+              <span class="cl-icon">✉</span>
+              <span>bruno@email.com</span>
+            </a>
+            <a href="https://linkedin.com/in/seu-linkedin" target="_blank" class="contato-link">
+              <span class="cl-icon">in</span>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/seu-github" target="_blank" class="contato-link">
+              <span class="cl-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.085 1.84 1.238 1.84 1.238 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.604-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+              </span>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+        <form class="contato-form" id="contato-form" novalidate>
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Olá, Bruno! Gostaria de conversar sobre..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <span id="btn-label">Enviar mensagem</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <p class="form-note" id="form-note"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">[QA::Portfolio]</span>
+        <span class="footer-copy">© 2025 · Construído com precisão e café ☕</span>
+        <span class="footer-status">
+          <span class="badge-dot small"></span>
+          sistema estável
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
