@@ -1,4 +1,4 @@
-# QA Portfolio — Bruno Ferreira
+# QA Portfolio — Bruno Aurelio
 
 Portfólio profissional de QA Software Analyst. Construído com HTML, CSS e JavaScript puro — sem dependências, zero build step, pronto para deploy na Vercel.
 
@@ -64,4 +64,4 @@ Substituir em `main.js` o bloco `await new Promise(...)` pelo fetch da API desej
 
 ---
 
-> Construído com ☕ e qualidade de software.
+> Construído com IA.
