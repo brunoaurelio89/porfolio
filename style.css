@@ -15,11 +15,11 @@
   --bg-2:      #0e0e18;
   --bg-card:   #111120;
   --border:    rgba(255,255,255,0.07);
-  --border-hi: rgba(78,217,136,0.35);
+  --border-hi: rgba(56,189,248,0.35);
 
-  --green:     #4ed988;
-  --green-dim: rgba(78,217,136,0.12);
-  --green-glow:rgba(78,217,136,0.25);
+  --green:     #38bdf8;
+  --green-dim: rgba(56,189,248,0.10);
+  --green-glow:rgba(56,189,248,0.22);
 
   --text:      #e8eaf0;
   --text-2:    #a0a3b1;
@@ -220,8 +220,8 @@ body {
   position: fixed;
   inset: 0;
   background-image:
-    linear-gradient(rgba(78,217,136,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(78,217,136,0.03) 1px, transparent 1px);
+    linear-gradient(rgba(56,189,248,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56,189,248,0.03) 1px, transparent 1px);
   background-size: 48px 48px;
   pointer-events: none;
   z-index: 0;
@@ -291,7 +291,7 @@ body {
   color: var(--green);
   -webkit-text-stroke: 1px var(--green);
   color: transparent;
-  background: linear-gradient(135deg, var(--green), #7fffd4);
+  background: linear-gradient(135deg, var(--green), #7dd3fc);
   -webkit-background-clip: text;
   background-clip: text;
 }
@@ -348,16 +348,40 @@ body {
   background: var(--border);
 }
 
-/* ── Terminal ── */
-.hero-terminal {
+/* ── Terminal (duplo sobreposto) ── */
+.hero-terminals {
   position: relative;
   z-index: 1;
+  height: 460px;
+  animation: fadeSlideLeft 0.8s ease 0.3s both;
+}
+
+.hero-terminal {
+  position: absolute;
+  left: 0;
+  right: 0;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: 0 0 60px rgba(78,217,136,0.08), 0 32px 64px rgba(0,0,0,0.6);
-  animation: fadeSlideLeft 0.8s ease 0.3s both;
+}
+
+.terminal-back {
+  top: -60px;
+  right: -20px;
+  left: 20px;
+  opacity: 0.85;
+  transform: rotate(1.2deg);
+  border-color: rgba(56,189,248,0.25);
+  z-index: 1;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+}
+
+.terminal-front {
+  top: 80px;
+  z-index: 2;
+  border-color: rgba(56,189,248,0.3);
+  box-shadow: 0 0 60px rgba(56,189,248,0.10), 0 24px 48px rgba(0,0,0,0.6);
 }
 
 @keyframes fadeSlideLeft {
@@ -387,7 +411,7 @@ body {
 
 .dot-red    { background: #ff5f56; }
 .dot-yellow { background: #ffbd2e; }
-.dot-green  { background: #27c93f; }
+.dot-green  { background: #38bdf8; }
 
 .terminal-title {
   font-family: var(--font-mono);
@@ -423,6 +447,8 @@ body {
 
 .t-dim   { color: var(--text-3); }
 .t-cmd   { color: var(--text); }
+.t-green { color: var(--green); }
+.t-blue  { color: var(--green); }
 .t-green { color: var(--green); }
 .t-result { margin-top: 0.5rem; border-top: 1px solid var(--border); padding-top: 0.5rem; }
 
@@ -734,7 +760,7 @@ body {
 .projeto-card.featured {
   grid-column: 1 / -1;
   border-color: var(--border-hi);
-  background: linear-gradient(135deg, var(--bg-card) 0%, rgba(78,217,136,0.04) 100%);
+  background: linear-gradient(135deg, var(--bg-card) 0%, rgba(56,189,248,0.04) 100%);
 }
 
 .projeto-glow {
@@ -869,7 +895,7 @@ body {
 
 .metrica-card.accent-card {
   border-color: var(--border-hi);
-  background: linear-gradient(135deg, var(--bg-card), rgba(78,217,136,0.06));
+  background: linear-gradient(135deg, var(--bg-card), rgba(56,189,248,0.06));
 }
 
 .metrica-icon {
@@ -1092,6 +1118,215 @@ body {
   to   { opacity: 1; transform: translateY(0); }
 }
 
+/* ── Terminal back-card animation delays ── */
+.back-line-1 { animation-delay: 0.4s; }
+.back-line-2 { animation-delay: 0.8s; }
+.back-line-3 { animation-delay: 1.2s; }
+
+/* corpo do card de trás — altura controlada para mostrar só as linhas */
+.terminal-body-back {
+  padding: 1rem 1.5rem 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  line-height: 2;
+}
+
+/* ── Projeto: Arquitetura de testes ── */
+.projeto-arquitetura {
+  background: rgba(56,189,248,0.04);
+  border: 1px solid rgba(56,189,248,0.12);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.arq-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-3);
+  margin-bottom: 0.85rem;
+}
+
+.arq-flow {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.85rem;
+}
+
+.arq-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-2);
+  text-align: center;
+  line-height: 1.3;
+  min-width: 72px;
+}
+
+.arq-node.highlight-node {
+  border-color: rgba(56,189,248,0.3);
+  color: var(--green);
+  background: rgba(56,189,248,0.06);
+}
+
+.arq-icon { font-size: 1rem; }
+
+.arq-arrow {
+  color: var(--text-3);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.arq-schema {
+  border-top: 1px solid var(--border);
+  padding-top: 0.75rem;
+}
+
+.schema-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-3);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.schema-tables {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.schema-table {
+  padding: 2px 8px;
+  background: rgba(56,189,248,0.08);
+  border: 1px solid rgba(56,189,248,0.2);
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--green);
+}
+
+/* ── Projeto: Gherkin preview ── */
+.projeto-gherkin {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.gherkin-header {
+  padding: 0.5rem 1rem;
+  background: rgba(255,255,255,0.02);
+  border-bottom: 1px solid var(--border);
+  color: var(--text-3);
+}
+
+.gherkin-body {
+  padding: 0.75rem 1rem;
+  line-height: 1.8;
+}
+
+.gh-line { color: var(--text-2); }
+.gh-indent  { padding-left: 1rem; }
+.gh-indent2 { padding-left: 2rem; }
+
+.gh-kw  { color: var(--green); font-weight: 700; }
+.gh-str { color: #fbbf24; }
+
+/* ── Projeto: Pipeline visual ── */
+.projeto-pipeline {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+  padding: 0.85rem 1rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.pipeline-step {
+  padding: 4px 12px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-2);
+  background: var(--bg-card);
+}
+
+.pipeline-step.ps-trigger {
+  border-color: rgba(56,189,248,0.3);
+  color: var(--green);
+  background: rgba(56,189,248,0.06);
+}
+
+.pipeline-step.ps-ok {
+  border-color: rgba(56,189,248,0.3);
+  color: var(--green);
+  background: rgba(56,189,248,0.06);
+}
+
+.pipe-arrow {
+  color: var(--text-3);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+/* ── Projeto: Áreas do processo ── */
+.projeto-areas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+}
+
+.area-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.area-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.area-item strong {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.area-item p {
+  font-size: 0.78rem;
+  color: var(--text-2);
+  font-family: var(--font-mono);
+  margin-top: 1px;
+}
+
+
+
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -1115,7 +1350,7 @@ body {
     gap: 3rem;
   }
 
-  .hero-terminal { display: none; }
+  .hero-terminals { display: none; }
 
   .sobre-grid,
   .contato-grid { grid-template-columns: 1fr; gap: 3rem; }
