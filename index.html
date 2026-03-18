@@ -6,7 +6,7 @@
   <title>Bruno · QA Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
   <!-- Scan Line Overlay -->
@@ -44,7 +44,7 @@
         <p class="hero-label">// QA Software Analyst</p>
         <h1 class="hero-title">
           <span class="hero-title-line" id="name-line">Bruno</span>
-          <span class="hero-title-accent">Aurelio Rodrigues</span>
+          <span class="hero-title-accent">Aurelio</span>
         </h1>
       </div>
       <p class="hero-sub">
@@ -70,53 +70,71 @@
         </div>
         <div class="stat-divider"></div>
         <div class="stat">
-          <!-- <span class="stat-num" data-target="100">0</span>
-          <span class="stat-label">% ciclo de vida coberto</span> -->
+          <span class="stat-num" data-target="100">0</span>
+          <span class="stat-label">% ciclo de vida coberto</span>
         </div>
       </div>
     </div>
-    <div class="hero-terminal">
-      <div class="terminal-header">
-        <div class="terminal-dots">
-          <span class="dot dot-red"></span>
-          <span class="dot dot-yellow"></span>
-          <span class="dot dot-green"></span>
+    <div class="hero-terminals">
+      <!-- =====================================================
+           CARD DE TRÁS — visível acima do card da frente
+           Edite livremente o conteúdo das linhas abaixo.
+           
+           Para alterar o título da aba: edite o texto dentro
+           de <span class="terminal-title">...</span>
+           
+           Para alterar cada linha: edite o texto dentro de
+           cada <div class="terminal-line back-line-N">
+           ===================================================== -->
+      <div class="hero-terminal terminal-back">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+          </div>
+          <!-- EDITAR: título da aba do card de trás -->
+          <span class="terminal-title">test_runnerCypress.ts</span>
         </div>
-        <span class="terminal-title">test_runner.ts</span>
-      </div>
-      <div class="terminal-body" id="terminal-body">
-        <div class="terminal-line"><span class="t-dim">$</span> <span class="t-cmd">npx cypress run</span></div>
-        <div class="terminal-line t-delay-1"><span class="t-dim">▶</span> Running <span class="t-green">42 tests</span> across 3 projects</div>
-        <div class="terminal-line t-delay-2"><span class="t-dim">✓</span> <span class="t-green">login.cy.js</span> <span class="t-dim">(1.2s)</span></div>
-        <div class="terminal-line t-delay-3"><span class="t-dim">✓</span> <span class="t-green">checkout.cy.js</span> <span class="t-dim">(2.4s)</span></div>
-        <div class="terminal-line t-delay-4"><span class="t-dim">✓</span> <span class="t-green">api/payments.cy.js</span> <span class="t-dim">(0.8s)</span></div>
-        <div class="terminal-line t-delay-5"><span class="t-dim">✓</span> <span class="t-green">reports/dashboard.cy.js</span> <span class="t-dim">(3.1s)</span></div>
-        <div class="terminal-line t-delay-6 t-result"><span class="t-green">✔ 42 passed</span> <span class="t-dim">| 0 failed | 7.5s</span></div>
-        <div class="terminal-cursor" aria-hidden="true">█</div>
-      </div>
-      
-      <div class="hero-terminal">
-      <div class="terminal-header">
-        <div class="terminal-dots">
-          <span class="dot dot-red"></span>
-          <span class="dot dot-yellow"></span>
-          <span class="dot dot-green"></span>
-        </div>
-        <span class="terminal-title">test_runner.ts</span>
-      </div>
-      <div class="terminal-body" id="terminal-body">
-        <div class="terminal-line"><span class="t-dim">$</span> <span class="t-cmd">npx playwright test</span></div>
-        <div class="terminal-line t-delay-1"><span class="t-dim">▶</span> Running <span class="t-green">15 tests</span> across 1 projects</div>
-        <div class="terminal-line t-delay-2"><span class="t-dim">✓</span> <span class="t-green">login.spec.ts</span> <span class="t-dim">(1.2s)</span></div>
-        <div class="terminal-line t-delay-3"><span class="t-dim">✓</span> <span class="t-green">checkout.spec.ts</span> <span class="t-dim">(2.4s)</span></div>
-        <div class="terminal-line t-delay-4"><span class="t-dim">✓</span> <span class="t-green">api/payments.spec.ts</span> <span class="t-dim">(0.8s)</span></div>
-        <div class="terminal-line t-delay-5"><span class="t-dim">✓</span> <span class="t-green">reports/dashboard.spec.ts</span> <span class="t-dim">(3.1s)</span></div>
-        <div class="terminal-line t-delay-6 t-result"><span class="t-green">✔ 15 passed</span> <span class="t-dim">| 0 failed | 7.5s</span></div>
-        <div class="terminal-cursor" aria-hidden="true">█</div>
-      </div>
-    </div>
+        <div class="terminal-body terminal-body-back">
 
-    
+          <!-- EDITAR: linha 1 do card de trás -->
+          <div class="terminal-line back-line-1">
+            <div class="terminal-line"><span class="t-dim">$</span> <span class="t-cmd">npx cypress run</span></div>
+            <div class="terminal-line t-delay-1"><span class="t-dim">▶</span> Running <span class="t-blue">42 tests</span> across 3 projects</div>
+          </div>
+
+          <!-- EDITAR: linha 2 do card de trás -->
+          <div class="terminal-line back-line-2">
+            <!-- <span class="t-dim">✓</span> install dependencies <span class="t-dim">(8.3s)</span> -->
+            <div class="terminal-line t-delay-2"><span class="t-dim">✓</span> <span class="t-blue">login.spec.ts</span> <span class="t-dim">(0.8s)</span></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Card da frente: test runner -->
+      <div class="hero-terminal terminal-front">
+        <div class="terminal-header">
+          <div class="terminal-dots">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+          </div>
+          <span class="terminal-title">test_runner.ts</span>
+        </div>
+        <div class="terminal-body" id="terminal-body">
+          <div class="terminal-line"><span class="t-dim">$</span> <span class="t-cmd">npx playwright test</span></div>
+          <div class="terminal-line t-delay-1"><span class="t-dim">▶</span> Running <span class="t-blue">42 tests</span> across 3 projects</div>
+          <div class="terminal-line t-delay-2"><span class="t-dim">✓</span> <span class="t-blue">login.spec.ts</span> <span class="t-dim">(1.2s)</span></div>
+          <div class="terminal-line t-delay-3"><span class="t-dim">✓</span> <span class="t-blue">checkout.spec.ts</span> <span class="t-dim">(2.4s)</span></div>
+          <div class="terminal-line t-delay-4"><span class="t-dim">✓</span> <span class="t-blue">api/payments.spec.ts</span> <span class="t-dim">(0.8s)</span></div>
+          <div class="terminal-line t-delay-5"><span class="t-dim">✓</span> <span class="t-blue">reports/dashboard.spec.ts</span> <span class="t-dim">(3.1s)</span></div>
+          <div class="terminal-line t-delay-6 t-result"><span class="t-blue">✔ 42 passed</span> <span class="t-dim">| 0 failed | 7.5s</span></div>
+          <div class="terminal-cursor" aria-hidden="true">█</div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Sobre -->
@@ -237,24 +255,25 @@
             <div class="skill-item">
               <span class="skill-name">Postman</span>
               <div class="skill-bar-wrapper">
-                <div class="skill-bar" data-level="90"></div>
+                <div class="skill-bar" data-level="85"></div>
               </div>
-              <span class="skill-pct">90%</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-name">ApiDog</span>
-              <div class="skill-bar-wrapper">
-                <div class="skill-bar" data-level="82"></div>
-              </div>
-              <span class="skill-pct">82%</span>
+              <span class="skill-pct">85%</span>
             </div>
             <div class="skill-item">
               <span class="skill-name">Swagger</span>
               <div class="skill-bar-wrapper">
-                <div class="skill-bar" data-level="78"></div>
+                <div class="skill-bar" data-level="80"></div>
               </div>
-              <span class="skill-pct">78%</span>
+              <span class="skill-pct">80%</span>
             </div>
+            <div class="skill-item">
+              <span class="skill-name">ApiDog</span>
+              <div class="skill-bar-wrapper">
+                <div class="skill-bar" data-level="60"></div>
+              </div>
+              <span class="skill-pct">60%</span>
+            </div>
+            
           </div>
         </div>
 
@@ -267,24 +286,24 @@
             <div class="skill-item">
               <span class="skill-name">GitHub Actions</span>
               <div class="skill-bar-wrapper">
-                <div class="skill-bar" data-level="88"></div>
+                <div class="skill-bar" data-level="72"></div>
               </div>
-              <span class="skill-pct">88%</span>
+              <span class="skill-pct">72%</span>
             </div>
             <div class="skill-item">
               <span class="skill-name">Jenkins</span>
               <div class="skill-bar-wrapper">
-                <div class="skill-bar" data-level="75"></div>
+                <div class="skill-bar" data-level="30"></div>
               </div>
-              <span class="skill-pct">75%</span>
+              <span class="skill-pct">30%</span>
             </div>
-            <div class="skill-item">
+            <!-- <div class="skill-item">
               <span class="skill-name">Docker</span>
               <div class="skill-bar-wrapper">
                 <div class="skill-bar" data-level="70"></div>
               </div>
               <span class="skill-pct">70%</span>
-            </div>
+            </div> -->
           </div>
         </div>
 
@@ -297,24 +316,24 @@
             <div class="skill-item">
               <span class="skill-name">Grafana</span>
               <div class="skill-bar-wrapper">
-                <div class="skill-bar" data-level="85"></div>
+                <div class="skill-bar" data-level="45"></div>
               </div>
-              <span class="skill-pct">85%</span>
+              <span class="skill-pct">45%</span>
             </div>
             <div class="skill-item">
-              <span class="skill-name">PostgreSQL</span>
+              <span class="skill-name">Power BI</span>
               <div class="skill-bar-wrapper">
-                <div class="skill-bar" data-level="80"></div>
+                <div class="skill-bar" data-level="35"></div>
               </div>
-              <span class="skill-pct">80%</span>
+              <span class="skill-pct">35%</span>
             </div>
-            <div class="skill-item">
+            <!-- <div class="skill-item">
               <span class="skill-name">TypeScript</span>
               <div class="skill-bar-wrapper">
                 <div class="skill-bar" data-level="83"></div>
               </div>
               <span class="skill-pct">83%</span>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -343,6 +362,7 @@
 
       <div class="projetos-grid">
 
+        <!-- PROJETO 1 — FEATURED -->
         <article class="projeto-card featured">
           <div class="projeto-card-inner">
             <div class="projeto-header">
@@ -357,17 +377,63 @@
             <p class="projeto-desc">
               Infraestrutura completa de relatórios de testes com Playwright. Gera relatórios JSON com timestamp, persiste resultados no PostgreSQL e visualiza métricas em dashboards Grafana em tempo real.
             </p>
+
+            <!-- Arquitetura de testes -->
+            <div class="projeto-arquitetura">
+              <span class="arq-label">// arquitetura</span>
+              <div class="arq-flow">
+                <div class="arq-node">
+                  <span class="arq-icon">🧪</span>
+                  <span>Playwright<br/>Specs</span>
+                </div>
+                <div class="arq-arrow">→</div>
+                <div class="arq-node">
+                  <span class="arq-icon">📄</span>
+                  <span>JSON Report<br/>+ timestamp</span>
+                </div>
+                <div class="arq-arrow">→</div>
+                <div class="arq-node">
+                  <span class="arq-icon">🔄</span>
+                  <span>reportDB<br/>.ts</span>
+                </div>
+                <div class="arq-arrow">→</div>
+                <div class="arq-node">
+                  <span class="arq-icon">🗄️</span>
+                  <span>PostgreSQL<br/>mochawesome_db</span>
+                </div>
+                <div class="arq-arrow">→</div>
+                <div class="arq-node highlight-node">
+                  <span class="arq-icon">📊</span>
+                  <span>Grafana<br/>Dashboard</span>
+                </div>
+              </div>
+              <div class="arq-schema">
+                <span class="schema-label">schema: reports_schema</span>
+                <div class="schema-tables">
+                  <span class="schema-table">test_reports</span>
+                  <span class="schema-table">test_runs</span>
+                  <span class="schema-table">test_suites</span>
+                  <span class="schema-table">test_cases</span>
+                </div>
+              </div>
+            </div>
+
             <div class="projeto-stack">
               <span>TypeScript</span>
               <span>Playwright</span>
               <span>PostgreSQL</span>
               <span>Grafana</span>
               <span>Mochawesome</span>
+              <span>Node.js</span>
             </div>
             <div class="projeto-metrics">
               <div class="pm-item">
                 <span class="pm-val">42</span>
                 <span class="pm-label">testes automatizados</span>
+              </div>
+              <div class="pm-item">
+                <span class="pm-val">4</span>
+                <span class="pm-label">tabelas no schema</span>
               </div>
               <div class="pm-item">
                 <span class="pm-val">100%</span>
@@ -378,52 +444,86 @@
           <div class="projeto-glow"></div>
         </article>
 
+        <!-- PROJETO 2 — BDD -->
         <article class="projeto-card">
           <div class="projeto-card-inner">
             <div class="projeto-header">
               <span class="projeto-type">BDD · Requisitos</span>
-              <div class="projeto-links">
-                <a href="#" class="projeto-link" title="GitHub">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.085 1.84 1.238 1.84 1.238 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.604-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
-                </a>
-              </div>
+              <a href="#" class="projeto-link" title="GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.085 1.84 1.238 1.84 1.238 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.604-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+              </a>
             </div>
             <h3 class="projeto-title">Move Mais · BDD Specs</h3>
             <p class="projeto-desc">
-              Cenários de teste BDD em Gherkin para a tela de gerenciamento de versões do app Move Mais. Cobertura completa das user stories desde a fase de requisitos.
+              Cenários BDD em Gherkin para a tela de gerenciamento de versões do app Move Mais, escritos na fase de requisitos junto ao PO — antes do desenvolvimento iniciar.
             </p>
+            <div class="projeto-gherkin">
+              <div class="gherkin-header">
+                <span class="t-dim">// versao_management.feature</span>
+              </div>
+              <div class="gherkin-body">
+                <div class="gh-line"><span class="gh-kw">Funcionalidade:</span> Gerenciamento de versões</div>
+                <div class="gh-line gh-indent"><span class="gh-kw">Cenário:</span> Criar nova versão</div>
+                <div class="gh-line gh-indent2"><span class="gh-kw">Dado</span> que estou na tela de versões</div>
+                <div class="gh-line gh-indent2"><span class="gh-kw">Quando</span> clico em "Nova Versão"</div>
+                <div class="gh-line gh-indent2"><span class="gh-kw">Então</span> <span class="gh-str">o sistema cria a versão</span></div>
+              </div>
+            </div>
             <div class="projeto-stack">
               <span>Gherkin</span>
               <span>BDD</span>
               <span>Cucumber</span>
               <span>Jira</span>
+              <span>Shift Left</span>
             </div>
           </div>
         </article>
 
+        <!-- PROJETO 3 — CI/CD -->
         <article class="projeto-card">
           <div class="projeto-card-inner">
             <div class="projeto-header">
               <span class="projeto-type">CI/CD · Pipeline</span>
-              <div class="projeto-links">
-                <a href="#" class="projeto-link" title="GitHub">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.085 1.84 1.238 1.84 1.238 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.604-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
-                </a>
-              </div>
+              <a href="#" class="projeto-link" title="GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.085 1.84 1.238 1.84 1.238 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.604-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+              </a>
             </div>
             <h3 class="projeto-title">GitHub Actions · QA Workflow</h3>
             <p class="projeto-desc">
-              Pipeline CI/CD completo para execução automática de testes Playwright a cada pull request, com geração de relatórios e notificações de falha.
+              Pipeline CI/CD completo para execução automática de testes a cada pull request, com geração de relatórios, upload de artifacts e notificação de falhas.
             </p>
+            <div class="projeto-pipeline">
+              <div class="pipeline-step ps-trigger">
+                <span>push / PR</span>
+              </div>
+              <span class="pipe-arrow">→</span>
+              <div class="pipeline-step">
+                <span>install</span>
+              </div>
+              <span class="pipe-arrow">→</span>
+              <div class="pipeline-step">
+                <span>build</span>
+              </div>
+              <span class="pipe-arrow">→</span>
+              <div class="pipeline-step">
+                <span>test</span>
+              </div>
+              <span class="pipe-arrow">→</span>
+              <div class="pipeline-step ps-ok">
+                <span>report</span>
+              </div>
+            </div>
             <div class="projeto-stack">
               <span>GitHub Actions</span>
               <span>Playwright</span>
               <span>Node.js</span>
               <span>YAML</span>
+              <span>Jenkins</span>
             </div>
           </div>
         </article>
 
+        <!-- PROJETO 4 — Documentação -->
         <article class="projeto-card">
           <div class="projeto-card-inner">
             <div class="projeto-header">
@@ -431,13 +531,44 @@
             </div>
             <h3 class="projeto-title">QA Process Flow · Documentação</h3>
             <p class="projeto-desc">
-              Documentação visual completa do fluxo QA da equipe: do levantamento de requisitos ao BAT, cobrindo as áreas de Requisitos, QA, Desenvolvimento e Negócio.
+              Documentação visual completa do fluxo QA da equipe, cobrindo as 4 áreas do ciclo de entrega com rastreabilidade end-to-end.
             </p>
+            <div class="projeto-areas">
+              <div class="area-item">
+                <span class="area-dot"></span>
+                <div>
+                  <strong>Requisitos</strong>
+                  <p>Análise, BDD, critérios de aceite</p>
+                </div>
+              </div>
+              <div class="area-item">
+                <span class="area-dot"></span>
+                <div>
+                  <strong>QA</strong>
+                  <p>Planejamento, casos de teste, automação</p>
+                </div>
+              </div>
+              <div class="area-item">
+                <span class="area-dot"></span>
+                <div>
+                  <strong>Desenvolvimento</strong>
+                  <p>Code review, integração, pipelines</p>
+                </div>
+              </div>
+              <div class="area-item">
+                <span class="area-dot"></span>
+                <div>
+                  <strong>Negócio (BAT)</strong>
+                  <p>Homologação, aceite, evidências</p>
+                </div>
+              </div>
+            </div>
             <div class="projeto-stack">
               <span>Miro</span>
               <span>Confluence</span>
               <span>BPMN</span>
               <span>Scrum</span>
+              <span>ISO 9001</span>
             </div>
           </div>
         </article>
@@ -532,9 +663,9 @@
             Aberto a oportunidades, colaborações e trocas sobre qualidade de software. Me manda uma mensagem.
           </p>
           <div class="contato-links">
-            <a href="mailto:baurelio.rodrigues@gmail.com" class="contato-link">
+            <a href="/cdn-cgi/l/email-protection#7a18080f14153a1f171b131654191517" class="contato-link">
               <span class="cl-icon">✉</span>
-              <span>baurelio.rodrigues@gmail.com</span>
+              <span><span class="__cf_email__" data-cfemail="adcfdfd8c3c2edc8c0ccc4c183cec2c0">[email&#160;protected]</span></span>
             </a>
             <a href="https://linkedin.com/in/brunoaurelio" target="_blank" class="contato-link">
               <span class="cl-icon">in</span>
@@ -576,15 +707,16 @@
     <div class="container">
       <div class="footer-inner">
         <span class="footer-logo">[QA::Portfolio]</span>
-        <span class="footer-copy">© 2025 · Construído com IA</span>
+        <span class="footer-copy">© 2025 · Construído IA</span>
         <span class="footer-status">
           <span class="badge-dot small"></span>
-          Em Atualização
+   
+          sistema estável
         </span>
       </div>
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="/main.js"></script>
 </body>
 </html>
