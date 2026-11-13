@@ -1,67 +1,76 @@
 # QA Portfolio — Bruno Aurelio
 
-Portfólio profissional de QA Software Analyst. Construído com HTML, CSS e JavaScript puro — sem dependências, zero build step, pronto para deploy na Vercel.
+Portfólio profissional de **QA Software Analyst**: automação de testes (Playwright, Cypress, Jest), testes de API, CI/CD e relatórios de qualidade.
 
-## 🚀 Como publicar
+> 🔗 **Site:** _adicione aqui a URL publicada na Vercel_
 
-### 1. Suba para o GitHub
+<!-- Sugestão: adicione um print da página inicial em docs/preview.png e descomente a linha abaixo -->
+<!-- ![Prévia do portfólio](docs/preview.png) -->
+
+## 🧰 Tecnologias
+
+- HTML, CSS e JavaScript puro — sem dependências e sem etapa de build
+- Google Fonts (Space Mono e Syne)
+- [Formspree](https://formspree.io) para o formulário de contato
+- Deploy estático na [Vercel](https://vercel.com)
+
+## 💻 Rodando localmente
+
+Qualquer servidor estático funciona. Por exemplo:
 
 ```bash
-git init
-git add .
-git commit -m "feat: QA portfolio inicial"
-git branch -M main
-git remote add origin https://github.com/SEU_USUARIO/qa-portfolio.git
-git push -u origin main
+npx serve .
 ```
 
-### 2. Deploy na Vercel
+Depois acesse `http://localhost:3000`.
 
-**Opção A — Vercel CLI:**
-```bash
-npm i -g vercel
-vercel
+## 📁 Estrutura
+
+```
+porfolio/
+├── index.html     # Estrutura e conteúdo
+├── style.css      # Estilo dark "terminal"
+├── main.js        # Interações (menu, contadores, animações, formulário)
+├── vercel.json    # Config de deploy da Vercel
+└── README.md
 ```
 
-**Opção B — Vercel Dashboard:**
-1. Acesse [vercel.com](https://vercel.com) e faça login
-2. Clique em **"Add New Project"**
-3. Importe o repositório do GitHub
-4. Mantenha as configurações padrão (Framework: **Other**)
-5. Clique em **Deploy** — pronto! ✅
+## ✉️ Formulário de contato
+
+O formulário envia as mensagens via Formspree:
+
+1. Crie um formulário gratuito em [formspree.io](https://formspree.io).
+2. Em `index.html`, troque `SEU_FORM_ID` no atributo `action` do `#contato-form` pelo ID gerado.
+
+Enquanto o ID não for configurado, o botão **Enviar** abre o app de e-mail do visitante com a mensagem preenchida (`mailto`), então nenhuma mensagem é perdida.
 
 ## ✏️ Personalização
 
 | O que alterar | Onde |
 |---|---|
-| Nome | `index.html` → `.hero-title` |
-| Email de contato | `index.html` → `#contato` + `main.js` |
-| Links GitHub / LinkedIn | `index.html` → `.contato-links` + `.projeto-links` |
+| Nome e cargo | `index.html` → `.hero-title`, `.hero-label` e `<title>` |
+| E-mail de contato | `index.html` → `.contato-links` e `data-fallback-email` do formulário |
+| Links GitHub / LinkedIn | `index.html` → `.contato-links` e `.projeto-links` |
 | Projetos | `index.html` → `#projetos` → `.projetos-grid` |
-| Percentuais das skills | `index.html` → `data-level="XX"` |
+| Nível das skills | `index.html` → `.skill-level` (Avançado / Intermediário / Básico) |
 | Números das métricas | `index.html` → `data-target="XX"` |
 
-## 📁 Estrutura
+## ♿ Acessibilidade
 
+- Navegação por teclado com foco visível
+- Menu mobile com `aria-expanded` e fechamento pela tecla Esc
+- Animações desativadas para quem usa `prefers-reduced-motion`
+
+## 🚀 Deploy
+
+Importe o repositório na Vercel (Framework: **Other**) ou use a CLI:
+
+```bash
+npx vercel
 ```
-portfolio-qa/
-├── index.html     # Estrutura e conteúdo
-├── style.css      # Estilo dark tech-noir
-├── main.js        # Interações (scroll, counters, form)
-├── vercel.json    # Config de deploy Vercel
-└── README.md
-```
 
-## 🔗 Formulário de contato
+## 🔭 Melhorias futuras
 
-O formulário atual simula o envio. Para ativar envio real, use:
-
-- **[Formspree](https://formspree.io)** — gratuito, sem backend
-- **[EmailJS](https://emailjs.com)** — direto no front-end
-- **[Resend](https://resend.com)** — moderno, REST API
-
-Substituir em `main.js` o bloco `await new Promise(...)` pelo fetch da API desejada.
-
----
-
-> Construído com IA.
+- Adicionar imagem Open Graph (`og:image`) para a prévia em redes sociais
+- Substituir as métricas da seção "Números que importam" por resultados de impacto (ex.: redução de bugs em produção, tempo de regressão)
+- Testes E2E do próprio portfólio com Playwright rodando no GitHub Actions
