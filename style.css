@@ -35,6 +35,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
   font-size: 16px;
 }
 
@@ -673,9 +674,9 @@ body {
 }
 
 .skill-item {
-  display: grid;
-  grid-template-columns: 110px 1fr 40px;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 0.75rem;
 }
 
@@ -685,26 +686,24 @@ body {
   color: var(--text-2);
 }
 
-.skill-bar-wrapper {
-  height: 4px;
-  background: var(--border);
-  border-radius: 100px;
-  overflow: hidden;
-}
-
-.skill-bar {
-  height: 100%;
-  border-radius: 100px;
-  background: linear-gradient(90deg, var(--green), #7fffd4);
-  width: 0%;
-  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.skill-pct {
+.skill-level {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--text-3);
-  text-align: right;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+  color: var(--text-2);
+  white-space: nowrap;
+}
+
+.skill-level--avancado {
+  color: var(--green);
+  border-color: var(--border-hi);
+  background: var(--green-dim);
+}
+
+.skill-level--intermediario {
+  color: var(--text);
 }
 
 .tech-pills {
@@ -1388,4 +1387,28 @@ body {
   .metricas-grid { grid-template-columns: repeat(2, 1fr); }
   .hero-stats { flex-wrap: wrap; }
   .footer-inner { justify-content: center; text-align: center; flex-direction: column; }
+}
+
+/* ── Acessibilidade ── */
+section[id] { scroll-margin-top: 80px; }
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
+  }
+  .scanlines,
+  .noise { display: none; }
 }
